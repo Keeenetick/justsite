@@ -29,7 +29,7 @@ header,
 }
 
 .navbar:not(.top-nav-collapse) {
-  background: transparent !important;
+  background:  #39448c !important;
 }
 
 @media (max-width: 991px) {
@@ -41,3 +41,4 @@ header,
 h6 {
   line-height: 1.7;
 }
+
