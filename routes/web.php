@@ -16,6 +16,8 @@ Route::get('/','ContactUSController@contactUS');
 Route::post('/contact-us',['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 Route::get('/blog','BlogController@post');
 Route::get('/offer','OfferController@index');
+Route::post('/offer','OfferController@store')->name('offer.store');
+
 //Bahmut Route
 Route::get('/bahmut','ContactUSControllerBahmut@contactUSBahmut');
 Route::get('/bahmut/offer','OfferControllerBahmut@index');

@@ -131,6 +131,7 @@
                 <div class="text-center">
                   <h3 class="dark-grey-text">
                     <strong>Свяжитесь с нами:</strong>
+                    
                     @if(Session::has('success'))
                       <div class="alert alert-success ">
                        {{ Session::get('success') }}

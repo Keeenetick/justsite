@@ -107,21 +107,34 @@
   <body>
       
   <div class="container">
-     
+   
         <div class="card-deck">
             @foreach ($products as $product)
             <div class="card mb-4">
                 <img class="card-img-top" src="{{Voyager::image($product->image)}}" alt="Card image cap">
+             
               <div class="card-body">
                 <h4 class="card-title">{{$product->name}}</h4>
                 <h3>$:{{$product->price}}</h3>
                 <p class="card-text">{{$product->body}}</p>
-                <button type="button" class="btn btn-blue btn-md" data-toggle="modal" data-target="#modalLoginAvatar">Заказать</button>
+               
+                <center>
+              <button type="button" value = "{{$product->id}}"class="btn btn-blue btn-md" data-toggle="modal" data-target="#modalLoginAvatar">Заказать</button></center>
               </div>
             </div>
             @endforeach
         </div>
+        
   </div>  
+  <center>
+  
+                    @if(Session::has('success'))
+                      <div class="alert alert-success d-inline-flex p-2 ">
+                       {{ Session::get('success') }}
+                      </div>
+                    @endif
+  
+</center>
   <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
@@ -132,15 +145,21 @@
         </div>
       <div class="modal-body text-center mb-1">
       <h5 class="mt-1 mb-2"></h5>
+      {!! Form::open(['route' => 'offer.store'] ) !!}
+     
         <div class="md-form ml-0 mr-0">
-        <input type="password" type="text" id="form29" name = "{{$product->name}}"class="form-control form-control-sm validate ml-0" placeholder="Ваше имя">
+        <input type="text" name = "name" type="text" class="form-control form-control-sm validate ml-0" placeholder="Ваше имя">
         </div>
         <div class="md-form ml-0 mr-0">
-          <input type="password" type="text" id="form29" class="form-control form-control-sm validate ml-0" placeholder="Ваш телефон">
+          <input type="text" name="offername" type="text" id="form29" class="form-control form-control-sm validate ml-0" placeholder="Название услуги">
+        </div>
+        <div class="md-form ml-0 mr-0">
+          <input type="text" name="phone" type="text" id="form29" class="form-control form-control-sm validate ml-0" placeholder="Ваш телефон">
         </div>
         <div class="text-center mt-4">
-          <button class="btn btn-cyan mt-1">Заказать<i class="fa fa-sign-in ml-1"></i></button>
+        <button class="btn btn-cyan mt-1">Заказать<i class="fa fa-sign-in ml-1"></i></button>
         </div>
+        {!!Form::close()!!}
       </div>
     </div>
   </div>
