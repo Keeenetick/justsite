@@ -11,12 +11,16 @@
 |
 */
 
-// Route::get('/', function (Request $request) {
- 
-// });
+//Kiev Route
 Route::get('/','ContactUSController@contactUS');
 Route::post('/contact-us',['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 Route::get('/blog','BlogController@post');
+Route::get('/offer','OfferController@index');
+//Bahmut Route
+Route::get('/bahmut','ContactUSControllerBahmut@contactUSBahmut');
+Route::get('/bahmut/offer','OfferControllerBahmut@index');
+Route::get('/bahmut/blog','BlogControllerBahmut@postBahmut');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

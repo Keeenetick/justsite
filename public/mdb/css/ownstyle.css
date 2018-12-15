@@ -1,0 +1,13 @@
+.navbar .nav-flex-icons {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.form-inline{
+    margin-right: -160px;
+  }
+
+  .jumbotron{
+    margin-top: 90px;
+  }

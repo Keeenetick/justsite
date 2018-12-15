@@ -18,7 +18,7 @@
   <!-- Your custom styles (optional) -->
   <link href="mdb/css/style.css" rel="stylesheet">
   <link href="mdb/css/style.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="mdb/css/ownstyle.css">
+  <link rel="stylesheet" href="/mdb/css/ownstyle.css">
 
         <script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->
@@ -30,16 +30,15 @@
   <!--Main Navigation-->
 <!-- Main navigation -->
 <header>
-  <style>
-  .navbar .nav-flex-icons {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-
-  </style>
+    <style>
+        .navbar .nav-flex-icons {
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          margin-top: 20px;
+      }
+      
+        </style>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-5">
     <div class="container">
@@ -53,7 +52,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Главная
+          <a class="nav-link" href="{{url('/bahmut')}}">Главная
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -61,13 +60,13 @@
             <a class="nav-link " href="#">Наши клиенты</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="{{url('/offer')}}">Услуги</a>
+          <a class="nav-link" href="{{url('/bahmut/offer')}}">Услуги</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">Контакты</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{{url('/blog')}}">Блог</a>
+            <a class="nav-link" href="{{url('bahmut/blog')}}">Блог</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">Рекомендации</a>
@@ -86,8 +85,8 @@
                      Выберите город
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">г.Киев</a>
-                      <a class="dropdown-item" href="{{url('/bahmut')}}">г.Бахмут Донецкая область</a>
+                      <a class="dropdown-item" href="{{url('/')}}">г.Киев</a>
+                      <a class="dropdown-item" href="{{url('/bahmut')}}">г.Бахмут. Донецкая область</a>
                       
                   </div>
                   <ul class="navbar-nav flex-row">
@@ -114,10 +113,10 @@
           <!--Grid column-->
           <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left slideOutUp"
             data-wow-delay="0.3s">
-            <h1 class="display-4 font-weight-bold ">Порашковая покраска г.Киев</h1>
+            <h1 class="display-4 font-weight-bold ">Порашковая покраска г.Бахмут</h1>
             <hr class="hr-light ">
-            <h6 class="mb-3">Наша компания предлагает услуги по порошковой покраске металла и металлоконструкций в Киеве. RAL (около 250).</h6>
-        <a href="{{url('/offer')}}" class="btn btn-outline-white">Мы предлагаем</a>
+            <h6 class="mb-3">Наша компания предлагает услуги по порошковой покраске металла и металлоконструкций в Бахмут(Донецкая область). RAL (около 250).</h6>
+        <a href="{{url('bahmut/offer')}}" class="btn btn-outline-white">Мы предлагаем</a>
             <button type="button" class="btn btn-outline-white" data-toggle="modal" data-target="#modalCookie1">График работ</button>
            
           </div>
@@ -165,7 +164,6 @@
               </div>
             </div>
             <!--/.Form-->
-            
           </div>
           <!--Grid column-->
         </div>
@@ -284,8 +282,8 @@
       <!--Grid column-->
   
       <!--Grid column-->
-      <div class="col-md-4 mb-2 center-on-small-only flex-center ">
-        <img src="/mdb/img/mainpage.png" alt="" class="z-depth-0 ">
+      <div class="col-md-4 mb-2 center-on-small-only flex-center">
+        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0 ">
       </div>
       <!--Grid column-->
   
@@ -342,7 +340,6 @@
   
   </section>
 </div>
-
 <script>
 new WOW().init();
 </script>

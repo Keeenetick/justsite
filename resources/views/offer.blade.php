@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -27,21 +26,8 @@
   <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
-  
- </head>
-<style>
-.jumbotron{
-  margin-top: 90px;
-}
-.navbar .nav-flex-icons {
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      margin-top: 20px;
-  }
-  
-</style>
 
+ </head>
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-5 ">
     <div class="container">
       <a class="navbar-brand " href="#">
@@ -61,13 +47,13 @@
           <li class="nav-item ">
             <a class="nav-link " href="#">Наши клиенты</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('/offer')}}">Услуги</a>
+          <li class="nav-item active">
+            <a class="nav-link " href="{{url('/offer')}}">Услуги</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">Контакты</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
             <a class="nav-link" href="{{url('/blog')}}">Блог</a>
               </li>
               <li class="nav-item">
@@ -86,7 +72,7 @@
                      Выберите город
                     </button>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{url('/')}}">г.Киев</a>
+                      <a class="dropdown-item" href="#">г.Киев</a>
                       <a class="dropdown-item" href="{{url('/bahmut')}}">г.Бахмут Донецкая область</a>
                       
                   </div>
@@ -96,49 +82,67 @@
                       <li class="nav-item"><a class="nav-link px-2" href="#"><span class="fa fa-instagram"></span></a></li>
                     
                   </ul>
+              {{-- <li class="nav-item">
+                <a class="nav-link"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><i class="fa fa-instagram"></i></a>
+              </li> --}}
             </ul>
           </div>
         </form>
       </div>
     </div>
   </nav>
-    <body >
-<div class="container ">
-  
- @foreach ($posts as $post)
-    <div class="jumbotron text-center z-depth-5">
+<style>
+.card-deck{
+    margin-top: 150px;
+}
 
-        <!-- Title -->
-        <h4 class="card-title h4 pb-2"><strong>{{$post->title}}</strong></h4>
+
+</style>
+  <body>
       
-        <!-- Card image -->
-        <div class="view overlay my-4">
-          <img src="{{Voyager::image($post->image)}}" class="img-fluid " alt="">
-          <a href="#">
-            <div class="mask rgba-white-slight"></div>
-          </a>
+  <div class="container">
+     
+        <div class="card-deck">
+            @foreach ($products as $product)
+            <div class="card mb-4">
+                <img class="card-img-top" src="{{Voyager::image($product->image)}}" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">{{$product->name}}</h4>
+                <h3>$:{{$product->price}}</h3>
+                <p class="card-text">{{$product->body}}</p>
+                <button type="button" class="btn btn-blue btn-md" data-toggle="modal" data-target="#modalLoginAvatar">Заказать</button>
+              </div>
+            </div>
+            @endforeach
         </div>
-      
-        <h5 class="indigo-text h5 mb-4"></h5> 
-      
-        <p class="card-text">{!!$post->body!!}</p>
-      
-        <!-- Linkedin -->
-        <a class="fa-lg p-2 m-2 li-ic"><i class="fa fa-linkedin grey-text"></i></a>
-        <!-- Twitter -->
-        <a class="fa-lg p-2 m-2 tw-ic"><i class="fa fa-twitter grey-text"></i></a>
-        <!-- Dribbble -->
-        <a class="fa-lg p-2 m-2 fb-ic"><i class="fa fa-facebook grey-text"></i></a>
-      
+  </div>  
+  <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+        </div>
+      <div class="modal-body text-center mb-1">
+      <h5 class="mt-1 mb-2"></h5>
+        <div class="md-form ml-0 mr-0">
+        <input type="password" type="text" id="form29" name = "{{$product->name}}"class="form-control form-control-sm validate ml-0" placeholder="Ваше имя">
+        </div>
+        <div class="md-form ml-0 mr-0">
+          <input type="password" type="text" id="form29" class="form-control form-control-sm validate ml-0" placeholder="Ваш телефон">
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-cyan mt-1">Заказать<i class="fa fa-sign-in ml-1"></i></button>
+        </div>
       </div>
-    @endforeach     <!-- Ju
-
+    </div>
+  </div>
 </div>
-   mbotron -->
-
-  <!-- Jumbotron -->
-        <!-- Sidebar Widgets Column -->
-      
-    
-    </body>
-</html>
+</body>

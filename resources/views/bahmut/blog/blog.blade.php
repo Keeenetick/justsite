@@ -13,34 +13,24 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         
   <!-- Bootstrap core CSS -->
-  <link href="mdb/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/mdb/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="mdb/css/mdb.min.css" rel="stylesheet">
+  <link href="/mdb/css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <link href="mdb/css/style.css" rel="stylesheet">
-  <link href="mdb/css/style.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="mdb/css/ownstyle.css">
-        <script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
+  <link href="/mdb/css/style.css" rel="stylesheet">
+  <link href="/mdb/css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/mdb/css/ownstyle.css">
+
+        <script type="text/javascript" src="/mdb/js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="mdb/js/popper.min.js"></script>
+  <script type="text/javascript" src="/mdb/js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/mdb/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+  <script type="text/javascript" src="/mdb/js/mdb.min.js"></script>
   
  </head>
-<style>
-.jumbotron{
-  margin-top: 90px;
-}
-.navbar .nav-flex-icons {
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      margin-top: 20px;
-  }
-  
-</style>
+
 
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-5 ">
     <div class="container">
@@ -54,7 +44,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item ">
-            <a class="nav-link" href="{{url('')}}">Главная
+            <a class="nav-link" href="{{url('bahmut')}}">Главная
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -62,13 +52,13 @@
             <a class="nav-link " href="#">Наши клиенты</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/offer')}}">Услуги</a>
+            <a class="nav-link" href="{{url('bahmut/offer')}}">Услуги</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">Контакты</a>
             </li>
             <li class="nav-item active">
-            <a class="nav-link" href="{{url('/blog')}}">Блог</a>
+            <a class="nav-link" href="{{url('bahmut/blog')}}">Блог</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">Рекомендации</a>
@@ -105,15 +95,15 @@
     <body >
 <div class="container ">
   
- @foreach ($posts as $post)
+
     <div class="jumbotron text-center z-depth-5">
 
         <!-- Title -->
-        <h4 class="card-title h4 pb-2"><strong>{{$post->title}}</strong></h4>
+        <h4 class="card-title h4 pb-2"><strong></strong></h4>
       
         <!-- Card image -->
         <div class="view overlay my-4">
-          <img src="{{Voyager::image($post->image)}}" class="img-fluid " alt="">
+          <img src="" class="img-fluid " alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -121,7 +111,7 @@
       
         <h5 class="indigo-text h5 mb-4"></h5> 
       
-        <p class="card-text">{!!$post->body!!}</p>
+        <p class="card-text"></p>
       
         <!-- Linkedin -->
         <a class="fa-lg p-2 m-2 li-ic"><i class="fa fa-linkedin grey-text"></i></a>
@@ -131,7 +121,7 @@
         <a class="fa-lg p-2 m-2 fb-ic"><i class="fa fa-facebook grey-text"></i></a>
       
       </div>
-    @endforeach     <!-- Ju
+       <!-- Ju
 
 </div>
    mbotron -->
