@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ContactUS;
 use Mail;
-
+use MetaTag;
 class ContactUSControllerBahmut extends Controller
 {
     public function contactUSBahmut()
     {
+        MetaTag::set('title','Главная');
+        MetaTag::set('description','Порошковая покраска Бахмут');
         return view('bahmut.welcome');
     }
 

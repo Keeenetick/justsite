@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ContactUS;
 use Mail;
+use MetaTag;
 class ContactUSController extends Controller
 {
     public function contactUS()
     {
+        MetaTag::set('title', 'Главная');
+        MetaTag::set('description', 'Пескаструйная покраска Киев');
         return view('welcome');
     }
 

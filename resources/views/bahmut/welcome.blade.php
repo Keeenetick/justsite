@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        <meta name="description" content="{{ MetaTag::get('description') }}">
+        <title>{{ MetaTag::get('title') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -30,20 +30,12 @@
   <!--Main Navigation-->
 <!-- Main navigation -->
 <header>
-    <style>
-        .navbar .nav-flex-icons {
-          -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-          flex-direction: row;
-          margin-top: 20px;
-      }
-      
-        </style>
+   
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-5">
     <div class="container">
       <a class="navbar-brand " href="#">
-        <strong>MDB</strong>
+          <img src="mdb/img/mainlogo.png" alt="" srcset="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
         aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
@@ -283,7 +275,7 @@
   
       <!--Grid column-->
       <div class="col-md-4 mb-2 center-on-small-only flex-center">
-        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0 ">
+          <img src="/mdb/img/mainpage.png" alt="" class="z-depth-0 ">
       </div>
       <!--Grid column-->
   
