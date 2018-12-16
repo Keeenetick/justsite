@@ -27,19 +27,11 @@
   <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+  
   <!--Main Navigation-->
 <!-- Main navigation -->
 <header>
-  <style>
-  .navbar .nav-flex-icons {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-
-  </style>
+ 
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-5">
     <div class="container">
@@ -57,11 +49,12 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link " href="#">Наши клиенты</a>
-          </li>
+          
           <li class="nav-item">
           <a class="nav-link" href="{{url('/offer')}}">Услуги</a>
+          </li>
+          <li class="nav-item ">
+          <a class="nav-link " href="{{url('/price')}}">Цены</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">Контакты</a>
@@ -221,9 +214,6 @@
 </div>
 <!--Section: Features v.4-->
 <div class="container">
-
-  
-
 <section>
 
     <!--Section heading-->
@@ -349,4 +339,60 @@ new WOW().init();
 </script>
   <!--/Section: Features v.4-->
     </body>
+    
+    <div class="content">
+      </div>
+          <footer id="myFooter">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-3">
+                          <h5>Get started</h5>
+                          <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Sign up</a></li>
+                              <li><a href="#">Downloads</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-3">
+                          <h5>About us</h5>
+                          <ul>
+                              <li><a href="#">Company Information</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Reviews</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-3">
+                          <h5>Support</h5>
+                          <ul>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Help desk</a></li>
+                              <li><a href="#">Forums</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-3">
+                          <h5>Legal</h5>
+                          <ul>
+                              <li><a href="#">Terms of Service</a></li>
+                              <li><a href="#">Terms of Use</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- Here we use the Google Embed API to show Google Maps. -->
+                  <!-- In order for this to work in your project you will need to generate a unique API key.  -->
+                  <iframe id="map-container" frameborder="0" style="border:0"
+                      src="https://maps.google.com/maps?q=%D0%9A%D0%B8%D0%B5%D0%B2&t=&z=13&ie=UTF8&iwloc=&output=embed" >
+                  </iframe>
+              </div>
+              <div class="social-networks">
+                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+              </div>
+              <div class="footer-copyright">
+                  <p>© 2016 Copyright Text </p>
+              </div>
+          </footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>
