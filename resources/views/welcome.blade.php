@@ -27,7 +27,7 @@
   <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
-  
+
   <!--Main Navigation-->
 <!-- Main navigation -->
 <header>
@@ -57,17 +57,14 @@
           <a class="nav-link " href="{{url('/price')}}">Цены</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
+              <a class="nav-link" href="#">Наши работы</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="{{url('/blog')}}">Блог</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Рекомендации</a>
+                  <a class="nav-link" href="#">Контакты</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">О нас</a>
-              </li>
         </ul>
         
         <form class="form-inline">
@@ -101,7 +98,7 @@
     <!-- Mask & flexbox options-->
     <div class="mask rgba-indigo-strong d-flex justify-content-center align-items-center ">
       <!-- Content -->
-      <div class="container ">
+      <div class="container">
         <!--Grid row-->
         <div class="row pt-lg-5 mt-lg-5">
           <!--Grid column-->
@@ -116,7 +113,7 @@
           </div>
           <!--Grid column-->
           <!--Grid column-->
-          <div class="col-md-6 col-xl-5 mb-4 ">
+          <div class="col-md-12 col-xl-5 mb-4 ">
             <!--Form-->
             <div class="card wow zoomIn " data-wow-delay="0.3s">
               <div class="card-body z-depth-2 ">
@@ -148,7 +145,6 @@
                 <div class="md-form">
                   <i class="fa fa-pencil prefix grey-text"></i>
                   <textarea type="text" name="message" id="form8" class="md-textarea form-control" rows="3" placeholder="Ваше сообщение"></textarea>
-                  
                 </div>
                 <div class="text-center mt-3 ">
                   <button class="btn btn-indigo ">Send</button>

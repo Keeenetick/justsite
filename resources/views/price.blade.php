@@ -70,17 +70,14 @@
           <a class="nav-link " href="{{url('/price')}}">Цены</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
+              <a class="nav-link" href="#">Наши работы</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="{{url('/blog')}}">Блог</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Рекомендации</a>
+                  <a class="nav-link" href="#">Контакты</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">О нас</a>
-              </li>
         </ul>
         
         <form class="form-inline">

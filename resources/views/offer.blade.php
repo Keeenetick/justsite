@@ -44,23 +44,21 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link " href="#">Наши клиенты</a>
-          </li>
+          
           <li class="nav-item active">
             <a class="nav-link " href="{{url('/offer')}}">Услуги</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
+              <a class="nav-link" href="{{url('/price')}}">Цены</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Наши работы</a>
+              </li>
             <li class="nav-item ">
             <a class="nav-link" href="{{url('/blog')}}">Блог</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Рекомендации</a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">О нас</a>
+                    <a class="nav-link" href="#">Контакты</a>
               </li>
         </ul>
         <form class="form-inline">
@@ -101,31 +99,29 @@
 .card-deck{
     margin-top: 150px;
 }
-
-
 </style>
   <body>
-      
-  <div class="container">
-   
-        <div class="card-deck">
-            @foreach ($products as $product)
-            <div class="card mb-4">
-                <img class="card-img-top" src="{{Voyager::image($product->image)}}" alt="Card image cap">
-             
-              <div class="card-body">
-                <h4 class="card-title">{{$product->name}}</h4>
-                <h3>$:{{$product->price}}</h3>
-                <p class="card-text">{{$product->body}}</p>
-               
-                <center>
-              <button type="button" value = "{{$product->id}}"class="btn btn-blue btn-md" data-toggle="modal" data-target="#modalLoginAvatar">Заказать</button></center>
+      <div class="container">
+          <h3 class="h3">shopping Demo-2 </h3>
+          <div class="row">
+              @foreach ($products as $product)
+              <div class="col-md-3 col-sm-6">
+                  <div class="product-grid2">
+                      <div class="product-image2">
+                          <a href="#">
+                          <img class="pic-1" src="{{ Voyager::image($product->image) }}">
+                          <img class="pic-2" src="{{ Voyager::image($product->image) }}">
+                          </a>
+                          <a class="add-to-cart" data-toggle="modal" data-target="#modalLoginAvatar" href="">Заказать</a>
+                      </div>
+                      <div class="product-content">
+                          <h3 class="title"><a href="#">{{$product->body}}</a></h3>
+                          <span class="price">{{$product->price}}</span>
+                      </div>
+                  </div>
               </div>
-            </div>
-            @endforeach
-        </div>
-        
-  </div>  
+              @endforeach
+          </div>
   <center>
   
                     @if(Session::has('success'))
@@ -148,7 +144,7 @@
       {!! Form::open(['route' => 'offer.store'] ) !!}
      
         <div class="md-form ml-0 mr-0">
-        <input type="text" name = "name" type="text" class="form-control form-control-sm validate ml-0" placeholder="Ваше имя">
+        <input type="text"  name = "name" type="text" class="form-control form-control-sm validate ml-0" placeholder="Ваше имя" >
         </div>
         <div class="md-form ml-0 mr-0">
           <input type="text" name="offername" type="text" id="form29" class="form-control form-control-sm validate ml-0" placeholder="Название услуги">
@@ -160,8 +156,10 @@
         <button class="btn btn-cyan mt-1">Заказать<i class="fa fa-sign-in ml-1"></i></button>
         </div>
         {!!Form::close()!!}
+        
       </div>
     </div>
   </div>
 </div>
+
 </body>
