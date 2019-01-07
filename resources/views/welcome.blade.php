@@ -19,79 +19,101 @@
   <link href="mdb/css/style.css" rel="stylesheet">
   <link href="mdb/css/style.min.css" rel="stylesheet">
   <link rel="stylesheet" href="mdb/css/ownstyle.css">
-
-        <script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="mdb/css/nav.css">
+  <script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="mdb/js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+<style>
 
+</style>
   <!--Main Navigation-->
 <!-- Main navigation -->
 <header>
+  
+
+  
+<div class="container">
  
+    <div class="header-content row vcard">
+      
+                <div class="logo col-md-3">
+      <!-- Your site title as branding in the menu -->
+      <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Выберите город
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">г.Бахмут Донецкая область</a>
+    <a class="dropdown-item" href="#">г.Киев</a>
+    
+  </div>
+</div>
+        <!-- end custom logo -->
+                </div>
+<div class="col-md-3">
+<div class="contacts">       
+
+         <div class="email"><i class="fa fa-envelope" aria-hidden="true"></i>
+oslss@slsl.com</a></div>
+<div class="email"><i class="fa fa-phone" aria-hidden="true"></i>
+066-222-22-22</a></div>
+
+  </div>
+</div>
+         <div class="col-md-6">
+        <div class="contacts adr">   
+        <div class="phone"><i class="fa fa-home" aria-hidden="true"></i> <span class="js-place" style="font-size:14px;color: #000;">
+          <span class="locality">г. Киев</span>, <span class="street-address">ул. Первомайская, д. 78</span></span></div>
+<div class="phone"><i class="fa fa-clock-o" aria-hidden="true"></i><span style="font-size:14px;color: #000;" class="js-city-work-time">Режим работы: <span class="workhours">8:30 - 19:00. Сб-Вс выходные</span></span>				</div>
+  </div>
+</div>
+    </div>    
+</div>
+
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar z-depth-5">
-    <div class="container">
-      <a class="navbar-brand " href="#">
+  
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="d-flex w-50 order-0">
         <img src="mdb/img/mainlogo.png" alt="" srcset="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
-        aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Главная
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-          <a class="nav-link" href="{{url('/offer')}}">Услуги</a>
-          </li>
-          <li class="nav-item ">
-          <a class="nav-link " href="{{url('/price')}}">Цены</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Наши работы</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Главная <span class="sr-only">Home</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{{url('/blog')}}">Блог</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Контакты</a>
-                </li>
+                <a class="nav-link" href="//codeply.com">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Цены</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Работы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Блог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
         </ul>
-        
-        <form class="form-inline">
-          <div class="md-form mt-0">
-            <ul class="navbar-nav nav-flex-icons">
-                <div class="btn-group">
-                    <button class="btn btn-danger btn-sm  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false">
-                     Выберите город
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">г.Киев</a>
-                      <a class="dropdown-item" href="{{url('/bahmut')}}">г.Бахмут Донецкая область</a>
-                      
-                  </div>
-                  <ul class="navbar-nav flex-row">
-                      <li class="nav-item"><a class="nav-link px-2" href="#"><span class="fa fa-facebook"></span></a></li>
-                      <li class="nav-item"><a class="nav-link px-2" href="#"><span class="fa fa-twitter"></span></a></li>
-                      <li class="nav-item"><a class="nav-link px-2" href="#"><span class="fa fa-instagram"></span></a></li>
-                    
-                  </ul>
-            </ul>
-          </div>
-        </form>
-      </div>
     </div>
-  </nav>
+    <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+</nav>
+  
+
+  
+
+
+
+
   <!-- Navbar -->
   <!-- Full Page Intro -->
   <div class="view" style="background-image: url('mdb/img/slider1.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
@@ -108,8 +130,6 @@
             <hr class="hr-light ">
             <h6 class="mb-3">Наша компания предлагает услуги по порошковой покраске металла и металлоконструкций в Киеве. RAL (около 250).</h6>
         <a href="{{url('/offer')}}" class="btn btn-outline-white">Мы предлагаем</a>
-            <button type="button" class="btn btn-outline-white" data-toggle="modal" data-target="#modalCookie1">График работ</button>
-           
           </div>
           <!--Grid column-->
           <!--Grid column-->
@@ -172,17 +192,7 @@
   <!--Main Navigation-->
     </head>
     <body>
-        {{-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif --}}
+       
 <!--Carousel Wrapper-->
 <!--Carousel Wrapper-->
 
@@ -191,33 +201,16 @@
             <script>new WOW().init();</script>
             <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true" data-backdrop="false">
-  <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body">
-        <div class="row d-flex justify-content-center align-items-center">
-
-          <p class="pt-3 pr-2">ПН-ПТ: 8:00 - 18:00 СБ-ВС: Выходной</p>
-
-          
-          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Понял</a>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
+  
 </div>
 <!--Section: Features v.4-->
 <div class="container">
 <section>
 
     <!--Section heading-->
-    <h1 class="py-5 font-weight-bold text-center">Почему мы лучшие на рынке?</h1>
+    <center><h3 style="margin-top:220px;">Почему мы лучшие на рынке?</h3></center>
     <!--Section description-->
-    <p class="px-5 mb-5 pb-3 lead grey-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna
-      aliqua. Ut enim ad minim veniam.</p>
+    <p class="px-5 mb-5 pb-3 lead grey-text text-center">sdsdsdsdds</p>
   
     <!--Grid row-->
     <div class="row">
@@ -271,8 +264,8 @@
       <!--Grid column-->
   
       <!--Grid column-->
-      <div class="col-md-4 mb-2 center-on-small-only flex-center ">
-        <img src="/mdb/img/mainpage.png" alt="" class="z-depth-0 ">
+      <div class="col-md-4 mb-2 center flex-center ">
+        
       </div>
       <!--Grid column-->
   
@@ -319,11 +312,14 @@
               deleniti hic.</p>
           </div>
         </div>
+        
         <!--Grid row-->
   
       </div>
       <!--Grid column-->
-  
+      <iframe id="map-container" frameborder="0" style="border:0"
+                      src="https://maps.google.com/maps?q=%D0%9A%D0%B8%D0%B5%D0%B2&t=&z=13&ie=UTF8&iwloc=&output=embed" >
+                  </iframe>
     </div>
     <!--Grid row-->
   
@@ -376,9 +372,7 @@ new WOW().init();
                   </div>
                   <!-- Here we use the Google Embed API to show Google Maps. -->
                   <!-- In order for this to work in your project you will need to generate a unique API key.  -->
-                  <iframe id="map-container" frameborder="0" style="border:0"
-                      src="https://maps.google.com/maps?q=%D0%9A%D0%B8%D0%B5%D0%B2&t=&z=13&ie=UTF8&iwloc=&output=embed" >
-                  </iframe>
+                  
               </div>
               <div class="social-networks">
                   <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
