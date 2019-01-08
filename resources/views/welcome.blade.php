@@ -20,6 +20,7 @@
   <link href="mdb/css/style.min.css" rel="stylesheet">
   <link rel="stylesheet" href="mdb/css/ownstyle.css">
   <link rel="stylesheet" href="mdb/css/nav.css">
+  <link rel="stylesheet" href="mdb/css/work.css">
   <script type="text/javascript" src="mdb/js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="mdb/js/popper.min.js"></script>
@@ -33,80 +34,59 @@
   <!--Main Navigation-->
 <!-- Main navigation -->
 <header>
+<ul class="nav nav-pills">
+				<li class="work"><i class="fa fa-phone"></i> +8 088 888 88 88</li>
+				<li class="work"><i class="fa fa-envelope"></i> info@domain.com</li>
+				<li class="work"><i class="fa fa-calendar-o"></i> Время работы: ПН-ПТ с 8:00 - 19:00</li>
+        <li class="work"><i class="fa fa-address-book-o"></i> г.Киев ул.Такая</li>
+        
+    </ul>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+ <div class="d-flex w-50 order-0">
+     <!-- <img src="mdb/img/mainlogo.png" alt="" srcset=""> -->
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+ </div>
+ <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+     <ul class="navbar-nav">
+         <li class="nav-item active">
+             <a class="nav-link" href="#">Главная <span class="sr-only">Home</span></a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="//codeply.com">Услуги</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="#">Цены</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="#">Работы</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="#">Блог</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="#">Контакты</a>
+         </li>
+         <div class="btn-group">
+                    <button class="btn btn-danger btn-sm  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Выберите город
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">г.Киев</a>
+                      <a class="dropdown-item" href="http://krets17.beget.tech/bahmut">г.Бахмут Донецкая область</a>
+                      
+                  </div>
+     </div></ul>
+ </div>
+ <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+</nav>
   
 
-  
-<div class="container">
- 
-    <div class="header-content row vcard">
-      
-                <div class="logo col-md-3">
-      <!-- Your site title as branding in the menu -->
-      <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Выберите город
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">г.Бахмут Донецкая область</a>
-    <a class="dropdown-item" href="#">г.Киев</a>
-    
-  </div>
-</div>
-        <!-- end custom logo -->
-                </div>
-<div class="col-md-3">
-<div class="contacts">       
-
-         <div class="email"><i class="fa fa-envelope" aria-hidden="true"></i>
-oslss@slsl.com</a></div>
-<div class="email"><i class="fa fa-phone" aria-hidden="true"></i>
-066-222-22-22</a></div>
-
-  </div>
-</div>
-         <div class="col-md-6">
-        <div class="contacts adr">   
-        <div class="phone"><i class="fa fa-home" aria-hidden="true"></i> <span class="js-place" style="font-size:14px;color: #000;">
-          <span class="locality">г. Киев</span>, <span class="street-address">ул. Первомайская, д. 78</span></span></div>
-<div class="phone"><i class="fa fa-clock-o" aria-hidden="true"></i><span style="font-size:14px;color: #000;" class="js-city-work-time">Режим работы: <span class="workhours">8:30 - 19:00. Сб-Вс выходные</span></span>				</div>
-  </div>
-</div>
-    </div>    
-</div>
 
   <!--Navbar-->
   
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <div class="d-flex w-50 order-0">
-        <img src="mdb/img/mainlogo.png" alt="" srcset="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Главная <span class="sr-only">Home</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="//codeply.com">Услуги</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Цены</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Работы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Блог</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-            </li>
-        </ul>
-    </div>
-    <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
-</nav>
+  
   
 
   
